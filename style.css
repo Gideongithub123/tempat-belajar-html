@@ -1,4 +1,4 @@
-/* ========== GLOBAL STYLE ========== */
+/* GLOBAL STYLE */
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 }
 
-/* ========== MAIN CONTAINER dengan Flexbox */
+/* MAIN CONTAINER dengan Flexbox */
 main {
     display: flex;
     flex-direction: column;
@@ -31,78 +31,104 @@ header {
     max-width: 100%;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 header {
-    background-color: #222;
-    color: white;
-    padding: 40px 20px;
-    border-bottom: 4px solid #444;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    background-color: #fff;
+    color: #333;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
     width: 100%;
     max-width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-header h1 {
+/* Header Container - Layout Horizontal dengan Flexbox */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 40px;
+    gap: 30px;
+}
+
+/* Logo Section */
+.logo h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    color: #222;
 }
 
-/* Social Media Container dengan Flexbox */
-.social-media {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.social-media a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-media a:hover {
-    color: #fff;
-}
-
-header b {
-    font-weight: 500;
-}
-
-/* Navigation dengan Flexbox */
+/* Navigation - Horizontal Layout */
 nav {
     display: flex;
-    flex-wrap: wrap;
+    gap: 30px;
+    flex: 1;
     justify-content: center;
-    gap: 20px;
 }
 
 nav a {
-    color: #e0e0e0;
+    color: #333;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s;
+    position: relative;
 }
 
 nav a:hover {
-    color: #fff;
+    color: #000;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #222;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Header CTA / Social Links */
+.header-cta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    background-color: #f5f5f5;
+    border-color: #222;
 }
 
 header hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #444;
-    margin-top: 10px;
+    display: none;
 }
 
-/* ========== SECTION: BIODATA dengan Flexbox ========== */
+/* SECTION: BIODATA dengan Flexbox */
 #biodata {
     background-color: white;
     border-radius: 10px;
@@ -159,7 +185,7 @@ header hr {
     color: #555;
 }
 
-/* ========== TWO COLUMN SECTION dengan Flexbox ========== */
+/* TWO COLUMN SECTION dengan Flexbox */
 .two-column-section {
     width: 85%;
     max-width: 950px;
@@ -174,7 +200,7 @@ header hr {
     margin-top: 0;
 }
 
-/* ========== SECTION UMUM ========== */
+/* SECTION UMUM */
 section {
     background-color: white;
     border-radius: 10px;
@@ -214,7 +240,7 @@ ul li:hover {
     transform: translateX(5px);
 }
 
-/* ========== TABEL ORGANISASI ========== */
+/* TABEL ORGANISASI */
 #organisasi {
     overflow-x: auto;
     margin-top: 0;
@@ -244,7 +270,7 @@ table tr:nth-child(even) {
     background-color: #f7f7f7;
 }
 
-/* ========== FORM KONTAK dengan Flexbox ========== */
+/* FORM KONTAK dengan Flexbox */
 #kontak {
     margin-top: 0;
 }
@@ -314,7 +340,7 @@ input[type="reset"]:hover {
     background-color: #555;
 }
 
-/* ========== FOOTER ========== */
+/* FOOTER */
 footer {
     text-align: center;
     color: #666;
@@ -332,7 +358,7 @@ footer hr {
     border-top: 1px solid #ddd;
 }
 
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (max-width: 700px) {
     header, section, footer, .two-column-section {
         width: 90%;
@@ -376,7 +402,7 @@ footer hr {
     }
 }
 
-/* ========== SMOOTH SCROLL ========== */
+/* SMOOTH SCROLL */
 html {
     scroll-behavior: smooth;
 }
