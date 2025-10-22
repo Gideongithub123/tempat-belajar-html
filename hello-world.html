@@ -1,138 +1,140 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" href="style.css">
       <title>Profil Diri</title>
       <link rel="icon" href="sharkbloblogocrop.png">
     </head>
 
 <body>
 <header>
-    <center>
-        <h1>Profil Mahasiswa</h1>
-        
-    </center>
+    <h1>Profil Mahasiswa</h1>
     
-<center>
+    <div class="social-media">
         <b>Sosial Media:</b>
-         <a href="https://linkedin.com/in/gideon-suharman-8b7b27240" target="_blank">LinkedIn</a> |
+         <a href="https://linkedin.com/in/gideon-suharman-8b7b27240" target="_blank">LinkedIn</a>
          <a href="https://instagram.com/gideo_on" target="_blank">Instagram</a>
-    
+    </div>
 
-        </ul>
-      
-    </center>
-
-  
     <nav>
-        <center>
-            <a href="#biodata">Biodata</a> | 
-            <a href="#pendidikan">Pendidikan</a> | 
-            <a href="#hobi">Hobi</a> | 
-            <a href="#organisasi">Organisasi</a> | 
-            <a href="#kontak">Kontak</a>
-        </center>
+        <a href="#biodata">Biodata</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#hobi">Hobi</a>
+        <a href="#organisasi">Organisasi</a>
+        <a href="#kontak">Kontak</a>
     </nav>
     <hr>
 </header>
 
-
-
-     <section id="biodata">
-        <center>
+<!-- BAGIAN BARU: Main Container untuk Flexbox -->
+<main>
+    <section id="biodata">
         <h1>Biodata</h1>
         <img src="fotoprofil2.jpg" alt="Foto Profil" width="150">
-        <p><b>Nama:</b> Gideon Kristian Suharman</p>
-        <p><b>Alamat:</b> Dalung, Bali</p>
-        <p><b>Email:</b> gideoncristganteng@gmail.com</p>
-        </center>
+        
+        <!-- BAGIAN BARU: Info Container dengan Flexbox -->
+        <div class="info-container">
+            <div class="info-item">
+                <b>Nama:</b>
+                <span>Gideon Kristian Suharman</span>
+            </div>
+            <div class="info-item">
+                <b>Alamat:</b>
+                <span>Dalung, Bali</span>
+            </div>
+            <div class="info-item">
+                <b>Email:</b>
+                <span>gideoncristganteng@gmail.com</span>
+            </div>
+        </div>
     </section>
 
+    <!-- BAGIAN BARU: Container untuk Pendidikan & Hobi dengan Flexbox -->
+    <div class="two-column-section">
+        <section id="pendidikan" class="half-section">
+            <h2>Riwayat Pendidikan</h2>
+            <ul>
+                <li>SD Imanuel</li>
+                <li>SMPK 2 HARAPAN</li>
+                <li>SMK Wira Harapan</li>
+            </ul>
+        </section>
 
+        <section id="hobi" class="half-section">
+            <h2>Hobi</h2>
+            <ul>
+                <li>Nonton Film</li>
+                <li>Bermain Game</li>
+                <li>Ngoding</li>
+            </ul>
+        </section>
+    </div>
 
-    <section id="pendidikan">
-        <h2>Riwayat Pendidikan</h2>
-        <ul>
-            <li>SD Imanuel</li>
-            <li>SMPK 2 HARAPAN</li>
-            <li>SMK Wira Harapan</li>
-        </ul>
-    </section>
-
-    <section id="hobi">
-        <h2>Hobi</h2>
-        <ul>
-            <li>Nonton Film</li>
-            <li>Bermain Game</li>
-            <li>Ngoding</li>
-        </ul>
-    </section>
-
-<section id="organisasi">
-    <h2>Pengalaman Organisasi</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Organisasi</th>
-                <th>Jabatan</th>
-                <th>Periode</th>
-                <th>Deskripsi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>PARASUGENI</td>
-                <td>Anggota</td>
-                <td>2025</td>
-                <td>Aktif dalam kegiatan theater</td>
-            </tr>
-            <tr>
-                <td>UKM Debat</td>
-                <td>Anggota</td>
-                <td>2025</td>
-                <td>Menjuarai Debat Teman</td>
-            </tr>
-            <tr>
-                <td>Event SPORTI</td>
-                <td>Acara</td>
-                <td>2025</td>
-                <td>Menjadi timekeeper di acara lomba antar angkatan</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section id="kontak">
-    <h2>Hubungi Saya</h2>
-    <form>
-        <table>
-            <tr>
-                <td><label for="nama"><b>Nama:</b></label></td>
-                <td><input type="text" id="nama" name="nama" required></td>
-            </tr>
-            <tr>
-                <td><label for="email"><b>Email:</b></label></td>
-                <td><input type="email" id="email" name="email" required></td>
-            </tr>
-            <tr>
-                <td><label for="pesan"><b>Pesan:</b></label></td>
-                <td><textarea id="pesan" name="pesan" rows="5" cols="30" required></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="Kirim Pesan">
-                    <input type="reset" value="Reset">
-                </td>
-            </tr>
+    <section id="organisasi">
+        <h2>Pengalaman Organisasi</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Organisasi</th>
+                    <th>Jabatan</th>
+                    <th>Periode</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PARASUGENI</td>
+                    <td>Anggota</td>
+                    <td>2025</td>
+                    <td>Aktif dalam kegiatan theater</td>
+                </tr>
+                <tr>
+                    <td>UKM Debat</td>
+                    <td>Anggota</td>
+                    <td>2025</td>
+                    <td>Menjuarai Debat Teman</td>
+                </tr>
+                <tr>
+                    <td>Event SPORTI</td>
+                    <td>Acara</td>
+                    <td>2025</td>
+                    <td>Menjadi timekeeper di acara lomba antar angkatan</td>
+                </tr>
+            </tbody>
         </table>
-    </form>
-</section>
+    </section>
 
+    <section id="kontak">
+        <h2>Hubungi Saya</h2>
+        <form>
+            <!-- BAGIAN BARU: Form menggunakan div instead of table -->
+            <div class="form-group">
+                <label for="nama"><b>Nama:</b></label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pesan"><b>Pesan:</b></label>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+            </div>
+            
+            <!-- BAGIAN BARU: Button Container dengan Flexbox -->
+            <div class="button-group">
+                <input type="submit" value="Kirim Pesan">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </section>
+</main>
 
 <footer>
-<hr>
-<p>terima kasih telah mengunjungi profil saya</p>
-
+    <hr>
+    <p>Terima kasih telah mengunjungi profil saya</p>
 </footer>
 </body>
 </html>
